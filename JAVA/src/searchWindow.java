@@ -64,7 +64,7 @@ public class searchWindow {
     private void initFilterpanel(JPanel filterPanel) {
         String[] filterList = {"이름 오름차순", "이름 내림차순", "거리 오름차순", "거리 내림차순"};
         JComboBox filterBox = new JComboBox(filterList);
-        String[] styleList = {"한식", "중식", "일식", "모두"};
+        String[] styleList = {"모두", "한식", "중식", "일식"};
         JComboBox styleBox = new JComboBox(styleList);
         filterPanel.setLayout(new FlowLayout());
         filterPanel.add(filterBox);

@@ -72,6 +72,11 @@ public class mainWindow {
         res_manage.addActionListener(e -> {
             // RestaurantInformation sw = new RestaurantInformation();
         });
+
+        admin.addActionListener(e -> {
+            new AdminMenu();
+            new AdminRes();
+        });
     }
 
 

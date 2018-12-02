@@ -57,12 +57,12 @@ public class Coupon extends JPanel {
 				"[]"));
 
 			//---- label2 ----
-			label2.setText("Restaurant");
-			frame1ContentPane.add(label2, "cell 1 1");
+//			label2.setText("Restaurant");
+//			frame1ContentPane.add(label2, "cell 1 1");
 
 			//======== scrollPane1 ========
 			{
-				scrollPane1.setViewportView(textArea1);
+				//scrollPane1.setViewportView(textArea1);
 			}
 			frame1ContentPane.add(scrollPane1, "cell 2 1");
 
@@ -100,8 +100,13 @@ public class Coupon extends JPanel {
 				String selected = list1.getSelectedValue().toString();
 				if(DBSQLHandler.GetInstance().BuyCoupon(selected.substring(0,selected.indexOf("|")),mainWindow.user_id) == 1)
 				{
+					JOptionPane.showMessageDialog(null, "구매 성공!");
 					frame1.setVisible(false);
 					frame1.dispose();
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "구매 실패 -  이미 보유중이거나 시스템 에러");
 				}
 			});
 		}

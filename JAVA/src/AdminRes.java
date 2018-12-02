@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.*;
 import net.miginfocom.swing.*;
 /*
@@ -88,24 +89,69 @@ public class AdminRes extends JPanel {
 			label5.setText("Select Category");
 			frame1ContentPane.add(label5, "cell 1 4");
 			frame1ContentPane.add(comboBox2, "cell 2 4");
+			comboBox2.addItem("한식");
+			comboBox2.addItem("양식");
+			comboBox2.addItem("일식");
+			comboBox2.addItem("중식");
+			comboBox2.addItem("동남아식");
+			comboBox2.addItem("맥시칸");
+			comboBox2.addItem("치킨");
 
 			//---- button2 ----
 			button2.setText("OK");
 			frame1ContentPane.add(button2, "cell 5 4");
 
+			button2.addActionListener(e->{
+				String resname = textArea1.getText();
+				int location = Integer.parseInt(textArea2.getText());
+				String category = comboBox2.getSelectedItem().toString();
+				if(DBSQLHandler.GetInstance().AddRestaurant(resname,category,location) == 1)
+				{
+					JOptionPane.showMessageDialog(null, "추가 성공!");
+					frame1.setVisible(false);
+					frame1.dispose();
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "추가 실패");
+				}
+			});
+
 			//---- label1 ----
 			label1.setText("Remove Restaurant");
 			frame1ContentPane.add(label1, "cell 1 6");
 			frame1ContentPane.add(comboBox1, "cell 1 7");
+			resList = DBSQLHandler.GetInstance().SearchRestaurant("","","");
+			for(RestaurantInfoClass res:resList)
+			{
+				comboBox1.addItem(res);
+			}
 
 			//---- button1 ----
 			button1.setText("OK");
 			frame1ContentPane.add(button1, "cell 5 7");
 			frame1.pack();
 			frame1.setLocationRelativeTo(frame1.getOwner());
+
+			button1.addActionListener(e->{
+				if(DBSQLHandler.GetInstance().DeleteRestaurant(((RestaurantInfoClass)comboBox1.getSelectedItem()).res_id)==1)
+				{
+					JOptionPane.showMessageDialog(null, "삭제 성공!");
+					frame1.setVisible(false);
+					frame1.dispose();
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "삭제 실패");
+				}
+			});
+
+			frame1.setVisible(true);
 		}
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
+
+	ArrayList<RestaurantInfoClass> resList = new ArrayList<>();
 
 	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
 	// Generated using JFormDesigner Evaluation license - Mun

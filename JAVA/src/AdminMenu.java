@@ -104,6 +104,7 @@ public class AdminMenu extends JPanel {
 			frame1ContentPane.add(button1, "cell 4 7");
 			frame1.pack();
 			frame1.setLocationRelativeTo(frame1.getOwner());
+			frame1.setVisible(true);
 		}
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}

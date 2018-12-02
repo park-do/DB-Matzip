@@ -1,3 +1,5 @@
+import net.miginfocom.swing.MigLayout;
+
 import java.awt.*;
 import javax.swing.*;
 /*
@@ -16,71 +18,120 @@ public class Reservation extends JFrame {
 
 	private void initComponents() {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
-		// Generated using JFormDesigner Evaluation license - leejongha
+		// Generated using JFormDesigner Evaluation license - Mun
+		frame1 = new JFrame();
+		label1 = new JLabel();
 		scrollPane1 = new JScrollPane();
-		list1 = new JList();
-		button1 = new JButton();
-		list2 = new JList();
+		textArea1 = new JTextArea();
 		label2 = new JLabel();
+		scrollPane5 = new JScrollPane();
+		textArea3 = new JTextArea();
 		label3 = new JLabel();
+		scrollPane4 = new JScrollPane();
+		textPane1 = new JTextPane();
+		button1 = new JButton();
 
-		//======== this ========
-		setTitle("Reservation");
-		Container contentPane = getContentPane();
-		contentPane.setLayout(null);
-
-		//======== scrollPane1 ========
+		//======== frame1 ========
 		{
-			scrollPane1.setViewportView(list1);
-		}
-		contentPane.add(scrollPane1);
-		scrollPane1.setBounds(115, 5, 260, 125);
+			frame1.setTitle("Review");
+			Container frame1ContentPane = frame1.getContentPane();
+			frame1ContentPane.setLayout(new MigLayout(
+					"hidemode 3",
+					// columns
+					"[fill]" +
+							"[fill]" +
+							"[fill]" +
+							"[92,fill]" +
+							"[fill]" +
+							"[fill]" +
+							"[fill]" +
+							"[fill]",
+					// rows
+					"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]" +
+							"[]"));
 
-		//---- button1 ----
-		button1.setText("\uc608\uc57d \ud558\uae30");
-		contentPane.add(button1);
-		button1.setBounds(25, 225, 350, 30);
-		contentPane.add(list2);
-		list2.setBounds(115, 145, 260, 65);
+			//---- label1 ----
+//			label1.setText("\uc2dd\ub2f9\uba85");
+//			frame1ContentPane.add(label1, "cell 1 1");
+//
+//			//======== scrollPane1 ========
+//			{
+//
+//				//---- textArea1 ----
+//				textArea1.setText("A\uc2dd\ub2f9");
+//				scrollPane1.setViewportView(textArea1);
+//			}
+//			frame1ContentPane.add(scrollPane1, "cell 2 1 2 1");
 
-		//---- label2 ----
-		label2.setText("\uc608\uc57d \uc2dc\uac04");
-		label2.setFont(new Font("\ub098\ub214\uace0\ub515 ExtraBold", Font.BOLD, 16));
-		contentPane.add(label2);
-		label2.setBounds(30, 160, 100, 35);
+			//---- label2 ----
+			label2.setText("인원수");
+			frame1ContentPane.add(label2, "cell 1 2");
 
-		//---- label3 ----
-		label3.setText("\uc2dd\ub2f9 \ubaa9\ub85d");
-		label3.setFont(new Font("\ub098\ub214\uace0\ub515 ExtraBold", Font.BOLD, 16));
-		contentPane.add(label3);
-		label3.setBounds(25, 40, 100, 35);
-
-		{ // compute preferred size
-			Dimension preferredSize = new Dimension();
-			for(int i = 0; i < contentPane.getComponentCount(); i++) {
-				Rectangle bounds = contentPane.getComponent(i).getBounds();
-				preferredSize.width = Math.max(bounds.x + bounds.width, preferredSize.width);
-				preferredSize.height = Math.max(bounds.y + bounds.height, preferredSize.height);
+			//======== scrollPane5 ========
+			{
+				scrollPane5.setViewportView(textArea3);
 			}
-			Insets insets = contentPane.getInsets();
-			preferredSize.width += insets.right;
-			preferredSize.height += insets.bottom;
-			contentPane.setMinimumSize(preferredSize);
-			contentPane.setPreferredSize(preferredSize);
+			frame1ContentPane.add(scrollPane5, "cell 2 2");
+
+			//---- label3 ----
+			label3.setText("시간");
+			frame1ContentPane.add(label3, "cell 1 4");
+
+			//======== scrollPane4 ========
+			{
+				scrollPane4.setViewportView(textPane1);
+			}
+			frame1ContentPane.add(scrollPane4, "cell 1 5 3 1");
+
+			//---- button1 ----
+			button1.setText("예약하기");
+			frame1ContentPane.add(button1, "cell 6 11");
+
+			button1.addActionListener(e->{
+				int nop =  Integer.parseInt(textArea3.getText());
+				String time = textPane1.getText();
+				if(DBSQLHandler.GetInstance().PutReservation(mainWindow.user_id, RestaurantInformation.res_id, nop, time) == 1)
+				{
+					JOptionPane.showMessageDialog(null, "예약 성공!");
+					frame1.setVisible(false);
+					frame1.dispose();
+				}
+				else
+				{
+					JOptionPane.showMessageDialog(null, "예약 실패");
+				}
+			});
+
+			frame1.pack();
+			frame1.setLocationRelativeTo(frame1.getOwner());
+			frame1.setVisible(true);
 		}
-		pack();
-		setLocationRelativeTo(getOwner());
-		setVisible(true);
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
 
 	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
-	// Generated using JFormDesigner Evaluation license - leejongha
+	// Generated using JFormDesigner Evaluation license - Mun
+	private JFrame frame1;
+	private JLabel label1;
 	private JScrollPane scrollPane1;
-	private JList list1;
-	private JButton button1;
-	private JList list2;
+	private JTextArea textArea1;
 	private JLabel label2;
+	private JScrollPane scrollPane5;
+	private JTextArea textArea3;
 	private JLabel label3;
+	private JScrollPane scrollPane4;
+	private JTextPane textPane1;
+	private JButton button1;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
 }

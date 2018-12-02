@@ -73,15 +73,14 @@ public class DBSQLHandler
     public ArrayList<RestaurantInfoClass> SearchRestaurant(String keyword, String category, String sortby)
     {
         ArrayList<RestaurantInfoClass> resultList = new ArrayList<>();
-        String sql = "select res_id,name,category,location,avg(Review.rate) \n" +
+        String sql = "select res_id,name,category,location \n" +
                 "From Restaurant " +
-                "natural join Review \n" +
                 "where name like '%"+keyword+"%' " +
                 (category.length()>1 ? "and category='"+category+"'" : "") +
                 "group by res_id \n" +
-                (sortby == "rate" ? "order by avg(Review.rate) desc;" :
+                //(sortby == "rate" ? "order by avg(Review.rate) desc;" :
                         (sortby == "location" ? "order by location;" :
-                                "order by name;"));
+                                "order by name;");
 
 
         try {
@@ -193,6 +192,53 @@ public class DBSQLHandler
         }
         String sql = "insert into `User-Coupon`(user_id,cp_id,code)\n" +
                 "values('"+user_id+"','"+cp_id+"','"+coupon+"');";
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            pstmt.close();
+            return 1;
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return -1;
+    }
+
+    public int PutReservation(int user_id, int res_id, int nop, String time)
+    {
+        String coupon = "";
+        Random r = new Random();
+        for(int i=0;i<12;i++)
+        {
+            coupon += r.nextInt(10);
+        }
+        String sql = "insert into Reservation(user_id, res_id, number_of_people, time)\n" +
+                    "values("+user_id+","+res_id+","+nop+",'"+time +"');";
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            pstmt.close();
+            return 1;
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return -1;
+    }
+
+    public int AddRestaurant(String name, String category, int location)
+    {
+        String sql = "insert into Restaurant(name,category,location) \n" +
+                "values ('"+name+"','"+category+"',"+location+");";
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            pstmt.close();
+            return 1;
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return -1;
+    }
+
+    public int DeleteRestaurant(int res_id)
+    {
+        String sql = "delete from Restaurant where res_id="+res_id;
         try
         {
             pstmt                = con.prepareStatement(sql);
