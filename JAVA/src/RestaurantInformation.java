@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.*;
 /*
  * Created by JFormDesigner on Fri Nov 30 14:55:22 KST 2018
@@ -10,11 +11,17 @@ import javax.swing.*;
  * @author leejongha
  */
 public class RestaurantInformation {
-	public RestaurantInformation() {
-		initComponents();
+	public static int res_id = -1;
+	public RestaurantInformation(int res_id) {
+		this.res_id = res_id;
+		String resInfo = DBSQLHandler.GetInstance().GetRestaurantInformation(res_id);
+		String name = resInfo.split("\\|")[0];
+		String rate = resInfo.split("\\|")[1];
+		String category = resInfo.split("\\|")[2];
+		initComponents(name, rate, category);
 	}
 
-	private void initComponents() {
+	private void initComponents(String name, String rate, String category) {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner Evaluation license - leejongha
 		Info = new JFrame();
@@ -59,8 +66,10 @@ public class RestaurantInformation {
 
 			InfoContentPane.add(textArea1);
 			textArea1.setBounds(20, 50, 225, 65);
+			textArea1.setText(name);
 			InfoContentPane.add(textArea3);
 			textArea3.setBounds(275, 55, 185, 60);
+			textArea3.setText("평점 : " + rate + " 카테고리 : " + category);
 
 			//---- label1 ----
 			label1.setText("\uc2dd\ub2f9 \uc815\ubcf4");
@@ -69,13 +78,17 @@ public class RestaurantInformation {
 			label1.setBounds(25, 15, 145, 30);
 
 			//---- label2 ----
-			label2.setText("\uce74\ud14c\uace0\ub9ac");
-			label2.setFont(new Font("\uad74\ub9bc", Font.BOLD, 20));
-			InfoContentPane.add(label2);
-			label2.setBounds(280, 20, 145, 30);
+			//label2.setText("\uce74\ud14c\uace0\ub9ac");
+			//label2.setFont(new Font("\uad74\ub9bc", Font.BOLD, 20));
+			//InfoContentPane.add(label2);
+			//label2.setBounds(280, 20, 145, 30);
 			InfoContentPane.add(list1);
 			list1.setBounds(20, 135, 345, 180);
-			list1.setListData(new String[]{"haha", "hoho"});
+
+			ArrayList<String> reviews = DBSQLHandler.GetInstance().GetReviews(res_id);
+			list1.setListData(reviews.toArray());
+
+			//list1.setListData(new String[]{"haha", "hoho"});
 
 			InfoContentPane.setPreferredSize(new Dimension(490, 385));
 			Info.pack();

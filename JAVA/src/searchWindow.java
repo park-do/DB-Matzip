@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class searchWindow {
     private JFrame mainFrame;
@@ -40,12 +41,24 @@ public class searchWindow {
         searchPanel.add(moveButton);
 
         searchIcon.addActionListener(e->{
-            String keyword = text.getText();
+            String keyword = textField.getText();
+            resList = DBSQLHandler.GetInstance().SearchRestaurant(keyword,"","");
+            queryResult.setListData(resList.toArray());
+        });
 
+        moveButton.addActionListener(e->{
+            if(queryResult.getSelectedValue() == null)
+                return;
+            RestaurantInfoClass info = (RestaurantInfoClass)queryResult.getSelectedValue();
+            new RestaurantInformation(info.res_id);
+            System.out.println(queryResult.getSelectedValue());
         });
     }
+
+    ArrayList<RestaurantInfoClass> resList;
+    JList queryResult;
     private void initResultPanel(JPanel resultPanel) {
-        JList queryResult = new JList(new String[]{"우리식당","홍콩반점"});
+        queryResult = new JList();
         resultPanel.add(queryResult);
     }
     private void initFilterpanel(JPanel filterPanel) {

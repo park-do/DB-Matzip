@@ -96,6 +96,14 @@ public class Review extends JPanel {
 			//---- button1 ----
 			button1.setText("\ub9ac\ubdf0\uc791\uc131\uc644\ub8cc");
 			frame1ContentPane.add(button1, "cell 6 11");
+
+			button1.addActionListener(e->{
+				String review =  textPane1.getText();
+				int rate = Integer.parseInt(textArea3.getText());
+				DBSQLHandler.GetInstance().WriteReview(RestaurantInformation.res_id,mainWindow.user_id,review,rate);
+				this.setVisible(false);
+			});
+
 			frame1.pack();
 			frame1.setLocationRelativeTo(frame1.getOwner());
 			frame1.setVisible(true);
