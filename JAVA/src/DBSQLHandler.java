@@ -248,4 +248,49 @@ public class DBSQLHandler
         } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
         return -1;
     }
+
+
+    public int AddMenu(int res_id, String name, int price)
+    {
+        String sql = "INSERT INTO `Menu-Res`(res_id,menu_name,price) " +
+                "VALUES("+res_id+",'"+name+"',"+price+")";
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            pstmt.close();
+            return 1;
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return -1;
+    }
+
+    public int DeleteMenu(int res_id, String name)
+    {
+        String sql = "delete from `Menu-Res` where res_id="+res_id+" and Menu_name='"+name+"'";
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            pstmt.close();
+            return 1;
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return -1;
+    }
+
+    public ArrayList<String> GetMenus(int res_id)
+    {
+        ArrayList<String> result = new ArrayList<>();
+        String sql = "select Menu_name from `Menu-Res` where res_id="+res_id;
+        try
+        {
+            pstmt                = con.prepareStatement(sql);
+            rs                   = pstmt.executeQuery();
+            while(rs.next())
+            {
+                result.add(rs.getString("Menu_name"));
+            }
+            pstmt.close();
+        } catch (SQLException e) { System.out.println("쿼리 수행 실패\n" + e); }
+        return result;
+    }
 }

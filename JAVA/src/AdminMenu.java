@@ -1,4 +1,5 @@
 import java.awt.*;
+import java.util.ArrayList;
 import javax.swing.*;
 import net.miginfocom.swing.*;
 /*
@@ -72,7 +73,7 @@ public class AdminMenu extends JPanel {
 			frame1ContentPane.add(comboBox2, "cell 2 2");
 
 			//---- label3 ----
-			label3.setText("Restaurant Name");
+			label3.setText("Menu Name");
 			frame1ContentPane.add(label3, "cell 1 3");
 
 			//======== scrollPane1 ========
@@ -84,6 +85,14 @@ public class AdminMenu extends JPanel {
 			//---- button2 ----
 			button2.setText("OK");
 			frame1ContentPane.add(button2, "cell 4 3");
+
+			button2.addActionListener(e->{
+				if(DBSQLHandler.GetInstance().AddMenu(((RestaurantInfoClass)comboBox2.getSelectedItem()).res_id,textArea1.getText(),10000)==1)
+				{
+					JOptionPane.showMessageDialog(null, "추가 성공!");
+				}
+			});
+
 
 			//---- label1 ----
 			label1.setText("Remove Menu");
@@ -99,15 +108,50 @@ public class AdminMenu extends JPanel {
 			frame1ContentPane.add(label7, "cell 1 7");
 			frame1ContentPane.add(comboBox3, "cell 2 7");
 
+
+			resList = DBSQLHandler.GetInstance().SearchRestaurant("","","");
+			for(RestaurantInfoClass res:resList)
+			{
+				comboBox1.addItem(res);
+				comboBox2.addItem(res);
+			}
+
+			comboBox1.addActionListener(e->{
+				menuList = DBSQLHandler.GetInstance().GetMenus(((RestaurantInfoClass)comboBox1.getSelectedItem()).res_id);
+				comboBox3.removeAllItems();
+				for(String menu:menuList)
+				{
+					comboBox3.addItem(menu);
+				}
+			});
+
 			//---- button1 ----
 			button1.setText("OK");
 			frame1ContentPane.add(button1, "cell 4 7");
+
+			button1.addActionListener(e -> {
+				if(DBSQLHandler.GetInstance().DeleteMenu(((RestaurantInfoClass)comboBox1.getSelectedItem()).res_id, comboBox3.getSelectedItem().toString())==1)
+				{
+					JOptionPane.showMessageDialog(null, "삭제 성공!");
+				}
+
+				menuList = DBSQLHandler.GetInstance().GetMenus(((RestaurantInfoClass)comboBox1.getSelectedItem()).res_id);
+				comboBox3.removeAllItems();
+				for(String menu:menuList)
+				{
+					comboBox3.addItem(menu);
+				}
+			});
+
 			frame1.pack();
 			frame1.setLocationRelativeTo(frame1.getOwner());
 			frame1.setVisible(true);
 		}
 		// JFormDesigner - End of component initialization  //GEN-END:initComponents
 	}
+
+	ArrayList<RestaurantInfoClass> resList = new ArrayList<>();
+	ArrayList<String> menuList = new ArrayList<>();
 
 	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
 	// Generated using JFormDesigner Evaluation license - Mun

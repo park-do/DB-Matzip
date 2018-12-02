@@ -4,11 +4,7 @@
     <list default="true" id="8ddd169f-8540-478f-a615-4487bdba7b11" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JAVA/src/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/AdminMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/AdminRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/AdminRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Coupon.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Coupon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JAVA/src/DBSQLHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/DBSQLHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/Reservation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/JAVA/src/mainWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/mainWindow.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JAVA/src/searchWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/JAVA/src/searchWindow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -22,8 +18,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JAVA/src/AdminMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="36" />
+            <state relative-caret-position="298">
+              <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
               <folding>
                 <element signature="e#225#226#0" expanded="true" />
                 <element signature="e#248#249#0" expanded="true" />
@@ -35,8 +31,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JAVA/src/AdminRes.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
+            <state relative-caret-position="165">
+              <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="66" />
             </state>
           </provider>
         </entry>
@@ -62,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JAVA/src/RestaurantInformation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1">
-              <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
+            <state relative-caret-position="189">
+              <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -80,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JAVA/src/Coupon.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="109" column="17" lean-forward="true" selection-start-line="102" selection-start-column="20" selection-end-line="109" selection-end-column="17" />
+            <state relative-caret-position="165">
+              <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,26 +94,26 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JAVA/src/searchWindow.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="203">
-              <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#223#224#0" expanded="true" />
                 <element signature="e#250#251#0" expanded="true" />
-                <element signature="e#2701#2702#0" expanded="true" />
+                <element signature="e#2827#2828#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JAVA/src/DBSQLHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="258">
-              <caret line="82" column="50" lean-forward="true" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+            <state relative-caret-position="355">
+              <caret line="280" column="5" lean-forward="true" selection-start-line="280" selection-start-column="5" selection-end-line="280" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#353#354#0" expanded="true" />
@@ -164,10 +160,10 @@
         <option value="$PROJECT_DIR$/JAVA/src/Coupon.java" />
         <option value="$PROJECT_DIR$/JAVA/src/Reservation.java" />
         <option value="$PROJECT_DIR$/JAVA/src/mainWindow.java" />
-        <option value="$PROJECT_DIR$/JAVA/src/AdminMenu.java" />
-        <option value="$PROJECT_DIR$/JAVA/src/searchWindow.java" />
         <option value="$PROJECT_DIR$/JAVA/src/AdminRes.java" />
         <option value="$PROJECT_DIR$/JAVA/src/DBSQLHandler.java" />
+        <option value="$PROJECT_DIR$/JAVA/src/AdminMenu.java" />
+        <option value="$PROJECT_DIR$/JAVA/src/searchWindow.java" />
       </list>
     </option>
   </component>
@@ -212,7 +208,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543764540926" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1543766691122" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/mariadb-java-client-2.3.0.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
@@ -304,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1543758240191</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="쿠폰 예약 관리1 추가">
+      <created>1543764580242</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1543764580242</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -341,7 +344,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="레스토랑 UI 구현중" />
-    <option name="LAST_COMMIT_MESSAGE" value="레스토랑 UI 구현중" />
+    <MESSAGE value="쿠폰 예약 관리1 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="쿠폰 예약 관리1 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -382,61 +386,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/AdminMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="106" column="12" selection-start-line="106" selection-start-column="12" selection-end-line="106" selection-end-column="36" />
-          <folding>
-            <element signature="e#225#226#0" expanded="true" />
-            <element signature="e#248#249#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/Coupon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="109" column="17" lean-forward="true" selection-start-line="102" selection-start-column="20" selection-end-line="109" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/AdminRes.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="130" column="34" lean-forward="true" selection-start-line="130" selection-start-column="34" selection-end-line="130" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/RestaurantInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="74" column="56" lean-forward="true" selection-start-line="74" selection-start-column="56" selection-end-line="74" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/Review.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="126" column="72" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JAVA/src/searchWindow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="66" column="35" selection-start-line="66" selection-start-column="35" selection-end-line="66" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#223#224#0" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#2701#2702#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JAVA/src/RestaurantInfoClass.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
@@ -451,6 +400,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/RestaurantInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="63" column="34" lean-forward="true" selection-start-line="63" selection-start-column="34" selection-end-line="63" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/Review.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="126" column="72" lean-forward="true" selection-start-line="17" selection-start-column="4" selection-end-line="126" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/Coupon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JAVA/src/mainWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -458,14 +431,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/AdminRes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="138" column="20" selection-start-line="138" selection-start-column="20" selection-end-line="138" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JAVA/src/DBSQLHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="82" column="50" lean-forward="true" selection-start-line="82" selection-start-column="50" selection-end-line="82" selection-end-column="50" />
+        <state relative-caret-position="355">
+          <caret line="280" column="5" lean-forward="true" selection-start-line="280" selection-start-column="5" selection-end-line="280" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#353#354#0" expanded="true" />
             <element signature="e#375#376#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/AdminMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="75" column="40" lean-forward="true" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+          <folding>
+            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JAVA/src/searchWindow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="25" column="35" lean-forward="true" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#250#251#0" expanded="true" />
+            <element signature="e#2827#2828#0" expanded="true" />
           </folding>
         </state>
       </provider>

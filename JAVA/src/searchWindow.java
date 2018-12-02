@@ -13,10 +13,10 @@ public class searchWindow {
     }
 
     private void createGUI() {
-        searchPanel = new JPanel();
-        initSearchPanel(searchPanel);
         resultPanel = new JPanel();
         initResultPanel(resultPanel);
+        searchPanel = new JPanel();
+        initSearchPanel(searchPanel);
         filterPanel = new JPanel();
         initFilterpanel(filterPanel);
 
@@ -45,6 +45,9 @@ public class searchWindow {
             resList = DBSQLHandler.GetInstance().SearchRestaurant(keyword,"","");
             queryResult.setListData(resList.toArray());
         });
+
+        resList = DBSQLHandler.GetInstance().SearchRestaurant("","","");
+        queryResult.setListData(resList.toArray());
 
         moveButton.addActionListener(e->{
             if(queryResult.getSelectedValue() == null)
